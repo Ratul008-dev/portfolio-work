@@ -1,0 +1,127 @@
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80vh;
+    padding: 0 20px;
+    gap: 40px;
+    margin-top: 90px;
+}
+
+.left-container {
+    flex: 1;
+}
+
+.right-container {
+    flex: 1;
+}
+
+.description-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+
+}
+
+.mypic {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.about-headline {
+    bottom: 30px;
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.return-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    background: white;
+    border-radius: 50%;
+
+    color: #060d74;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 800;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s ease;
+}
+
+.return-arrow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.return-arrow {
+    position: absolute;
+    left: 95%;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+        gap: 30px;
+        margin-top: 60px;
+        /* Reduced top margin for mobile headers */
+    }
+
+    .left-container,
+    .right-container {
+        width: 100%;
+        flex: none;
+    }
+
+    /* Prevent the text headline from riding up too high on mobile */
+    .about-headline {
+        bottom: 0;
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .description-heading {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    /* Ensure the image container has a set height when stacked */
+    .right-container {
+        height: 650px;
+        /* Adjust this value to control your image height on mobile */
+    }
+
+    .mypic {
+        height: 100%;
+    }
+
+    /* Move the arrow to a safe, accessible corner instead of 95% left width */
+   #about .return-arrow {
+        display: none;
+    }
+    /* #about{
+        width:50vw;
+    } */
+}

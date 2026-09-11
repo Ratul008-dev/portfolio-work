@@ -1,0 +1,88 @@
+.skills-container-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: transparent;
+    /* Deep elegant dark portfolio background */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.skills-title {
+    color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skills-canvas {
+    display: block;
+    width: 100%;
+    background: #111635;
+    /* Darker slate canvas container */
+    border-radius: 12px;
+    cursor: crosshair;
+}
+
+.skills-heading {
+    font-size: 2rem;
+    padding: 0 20px;
+    font-weight: 600;
+}
+.return-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    background: white;
+    border-radius: 50%;
+
+    color: #060d74;
+    text-decoration: none;
+    font-size: 18px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s ease;
+    left:95%;
+}
+
+.return-arrow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+    .skills-container-wrapper {
+        margin: 20px auto;
+        padding: 15px;
+        border-radius: 14px; /* Slightly softer curves for smaller screens */
+    }
+
+    .skills-heading {
+        font-size: 1.6rem;
+        padding: 0 10px;
+        text-align: center; /* Centers the main layout header on mobile */
+    }
+
+    .skills-title {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    /* Force the canvas wrapper boundaries to scale beautifully */
+    .skills-canvas {
+        border-radius: 8px;
+        max-width: 100%;
+        height: auto; /* Helps maintain structural aspect ratio layout */
+    }
+
+    /* Anchor the return arrow cleanly within screen boundaries */
+   #skills .return-arrow {
+        display: none; /* Hide the return arrow on mobile for better UX */
+    }
+}

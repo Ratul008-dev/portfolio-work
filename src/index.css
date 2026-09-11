@@ -1,0 +1,16 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  background: #061b38;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}

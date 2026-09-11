@@ -1,0 +1,168 @@
+.home-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80vh;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.home-left {
+    flex: 1;
+}
+
+.home-right {
+    flex: 1;
+}
+
+
+.visual-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+
+.photo-top,
+.photo-middle,
+.photo-bottom {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    border-radius: 16px;
+
+
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.photo-top {
+    top: 0;
+    z-index: 3;
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+}
+
+
+.photo-middle {
+    top: 60px;
+    z-index: 2;
+    transform: scale(0.93);
+    filter: blur(4px);
+    opacity: 0.75;
+}
+
+
+.photo-bottom {
+    top: 120px;
+    z-index: 1;
+    transform: scale(0.86);
+    filter: blur(8px);
+    opacity: 0.4;
+}
+
+.home-greeting {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.home-left h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.home-left h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.home-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+
+}
+
+.home-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.tech-button {
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+.tech-button:hover {
+    background-color: #fff;
+    color: #31243f;
+    transition: all 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+    .home-decoration {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .home-left, 
+    .home-right {
+        width: 100%;
+        flex: none;
+    }
+
+    /* Adjust the absolute image stack container for smaller screens */
+    .visual-container {
+        height: 380px; /* Reduced height to account for shorter image offsets */
+    }
+
+    /* Compress the vertical spacing of the overlapping photos */
+    .photo-middle {
+        top: 30px;
+        transform: scale(0.95);
+    }
+
+    .photo-bottom {
+        top: 60px;
+        transform: scale(0.90);
+    }
+
+    /* Scale down typography for better mobile readability */
+    .home-greeting {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .home-left h1 {
+        font-size: 1.6rem;
+    }
+
+    .home-left h2 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .home-description {
+        font-size: 0.95rem;
+    }
+
+    /* Ensure buttons stack nicely if they run out of horizontal space */
+    .home-buttons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .photo-top,
+.photo-middle,
+.photo-bottom{
+    object-fit: contain;
+}
+}

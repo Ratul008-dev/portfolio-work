@@ -1,0 +1,169 @@
+/* 1. Container & Typography */
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: transparent;
+    /* Change to your theme color */
+}
+
+.Contact-form {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffff;
+}
+
+.details {
+    font-size: 1.2rem;
+    color: #ffff;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* 2. Form Layout & Input Wrapper */
+.Contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Generates uniform spacing between our groups */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* Aligns error messages to the left */
+}
+
+/* 3. Target the Inputs and Textarea */
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+    
+}
+
+/* Style the focus state when the user clicks inside */
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #0070f3;
+    /* Highlight color */
+}
+
+/* Specific styling for the textarea height */
+.input-group textarea {
+    min-height: 120px;
+    resize: vertical;
+    /* Allows user to pull down but not sideways */
+}
+
+/* 4. Target the React Hook Form Error Messages */
+.error-message {
+    color: #d93025;
+    /* Red color for error warning */
+    font-size: 0.85rem;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* 5. Target the Submit Button */
+.Contact-field button[type="submit"] {
+    padding: 14px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.Contact-field button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+/* 6. Let's Connect Section Styles */
+.connect-section {
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.connect-heading {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px; /* Spacing between the two logos */
+}
+
+.social-icon {
+    font-size: 2.5rem; /* Size of the logos */
+    color: #555;
+    transition: transform 0.2s ease, color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover effects to make them pop */
+.social-icon:hover {
+    transform: translateY(-3px); /* Subtle lift up effect */
+}
+
+/* Platform-specific brand colors on hover */
+.social-icon.linkedin:hover {
+    color: #0077b5; /* LinkedIn Blue */
+}
+
+.social-icon.github:hover {
+    color: #24292e; /* GitHub Dark Gray/Black */
+}
+.return-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    background: white;
+    border-radius: 50%;
+
+    color: #060d74;
+    text-decoration: none;
+    font-size: 18px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s ease;
+    left:95%;
+}
+
+.return-arrow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+@media(max-width:768px){
+    #contact .return-arrow{
+        display:none;
+    }
+}
