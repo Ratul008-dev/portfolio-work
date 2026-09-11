@@ -109,7 +109,7 @@
 
     /* Ensure the image container has a set height when stacked */
     .right-container {
-        height: 650px;
+        height: 740px;
         /* Adjust this value to control your image height on mobile */
     }
 
